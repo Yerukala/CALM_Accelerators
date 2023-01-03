@@ -1,0 +1,6 @@
+rg_name              = "CYTSP5TSTRGCIN001"
+storageaccount_name  = "cytsp5sargcin001"
+monitor_ag_name      = "emailalert"
+storage_alert_name   = "storage-alert"
+storage_opertaion_name = "Microsoft.Storage/storageAccounts/write"
+storage_category       = "Recommendation"
