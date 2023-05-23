@@ -26,7 +26,7 @@
         },
         "distribute": {
           "type": "ManagedImage",
-          "location": "<location>",
+          "location": "westus2",
           "tags": {
             "environment": "test"
           }
