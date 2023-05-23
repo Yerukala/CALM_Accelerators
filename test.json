@@ -1,0 +1,37 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "resources": [
+    {
+      "type": "Microsoft.VirtualMachineImages/imageTemplates",
+      "name": "helloImageTemplateforSIG01",
+      "location": "westus2",
+      "apiVersion": "2021-01-01",
+      "properties": {
+        "source": {
+          "type": "PlatformImage",
+          "publisher": "RedHat",
+          "offer": "RHEL",
+          "sku": "8_3",
+          "version": "latest"
+        },
+        "customize": {
+          "windowsRestart": "On",
+          "commands": [
+            {
+              "type": "PowerShell",
+              "script": "echo 'Hello, World!'"
+            }
+          ]
+        },
+        "distribute": {
+          "type": "ManagedImage",
+          "location": "<location>",
+          "tags": {
+            "environment": "test"
+          }
+        }
+      }
+    }
+  ]
+}
