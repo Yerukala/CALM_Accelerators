@@ -5,7 +5,7 @@
     {
       "type": "Microsoft.VirtualMachineImages/imageTemplates",
       "name": "helloImageTemplateforSIG01",
-      "location": "eastus",
+      "location": "westus2",
       "apiVersion": "2021-01-01",
       "properties": {
         "source": {
@@ -26,7 +26,7 @@
         },
         "distribute": {
           "type": "ManagedImage",
-          "location": "eastus",
+          "location": "westus2",
           "tags": {
             "environment": "test"
           }
